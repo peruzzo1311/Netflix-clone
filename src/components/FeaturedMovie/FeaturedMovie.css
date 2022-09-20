@@ -46,7 +46,7 @@
 .featured-description{
   margin-top: 20px;
   font-size: 1.4rem;
-  color: #bbb;
+  color: #808080;
   max-width: 40%;
 }
 
@@ -87,4 +87,5 @@
 
 .featured-genres{
   margin-top: 20px;
+  color: #808080;
 }

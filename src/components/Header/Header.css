@@ -1,0 +1,30 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: transparent;
+}
+
+.header-logo{
+  height: 104px;
+}
+
+.header-logo img{
+  height: 100%;
+}
+
+.header-user{
+  height: 48px;
+}
+
+.header-user img{
+  height: 100%;
+  border-radius: 4px;
+}
