@@ -1,8 +1,9 @@
 import { React, useEffect, useState } from 'react'
 import './App.css'
 import TMDB from './api/TMDB'
-import List from './components/List/List'
-import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie.jsx'
+import List from './components/List'
+import FeaturedMovie from './components/FeaturedMovie/'
+import Header from './components/Header'
 
 export default () => {
   const [movieList, setMovieList] = useState([])
@@ -29,9 +30,11 @@ export default () => {
 
   return (
     <div className='page'>
+      <Header />
+
       {FeaturedData && <FeaturedMovie item={FeaturedData} />}
 
-      <section className='list'>
+      <section className='lists'>
         {movieList.map((item, key) => (
           <List key={key} title={item.title} items={item.items} />
         ))}
