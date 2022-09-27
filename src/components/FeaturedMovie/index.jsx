@@ -5,8 +5,15 @@ import { FaPlay } from 'react-icons/fa'
 export default ({ item }) => {
   let date = new Date(item.first_air_date)
   let genres = []
+  var sinapse = ''
   for (let i in item.genres) {
     genres.push(item.genres[i].name)
+  }
+
+  if (item.overview.length > 280) {
+    sinapse = item.overview.substr(0, 280) + '...'
+  } else {
+    sinapse = item.overview
   }
 
   return (
@@ -37,7 +44,7 @@ export default ({ item }) => {
               {item.number_of_seasons !== 1 ? 's' : ''}
             </div>
           </div>
-          <div className='featured-description'>{item.overview}</div>
+          <div className='featured-description'>{sinapse}</div>
           <div className='featured-buttons'>
             <a href={`/watch/${item.id}`} className='featured-watch'>
               <FaPlay />

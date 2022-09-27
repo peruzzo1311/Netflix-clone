@@ -3,13 +3,18 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 60px;
   padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   background: transparent;
+  transition: all ease 0.5s;
+}
+
+header.black{
+  background-color: #101010;
 }
 
 .header-logo{
