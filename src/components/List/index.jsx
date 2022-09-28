@@ -5,18 +5,27 @@ import { MdOutlineNavigateNext } from 'react-icons/md'
 import './List.css'
 
 export default ({ title, items }) => {
-  const [scrollX, setScrollX] = useState(-194)
+  const [scrollX, setScrollX] = useState(-634)
 
   const handleLeftArrow = () => {
-    let x = scrollX + 424
+    let x = scrollX + Math.round(window.innerWidth / 2)
+    let listW = items.results.length * 212
     if (x > 0) {
-      x = 0
+      x = window.innerWidth - listW - 60
     }
 
     setScrollX(x)
   }
 
-  const handleRightArrow = () => {}
+  const handleRightArrow = () => {
+    let x = scrollX - Math.round(window.innerWidth / 2)
+    let listW = items.results.length * 212
+    if (window.innerWidth - listW > x) {
+      x = 0
+    }
+
+    setScrollX(x)
+  }
 
   return (
     <div className='movie'>

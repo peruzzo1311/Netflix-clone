@@ -4,6 +4,7 @@ import TMDB from './api/TMDB'
 import List from './components/List'
 import FeaturedMovie from './components/FeaturedMovie/'
 import Header from './components/Header'
+import loading from './images/tenor.gif'
 
 export default () => {
   const [movieList, setMovieList] = useState([])
@@ -56,6 +57,12 @@ export default () => {
           <List key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      {movieList <= 0 && (
+        <div className='loading'>
+          <img src='https://rchandru.com/images/portfolio/modals/m-loading.gif' />
+        </div>
+      )}
     </div>
   )
 }

@@ -52,3 +52,7 @@
 .movie:hover .movieRow-right{
   opacity: 1;
 }
+
+.movieRow-list{
+  transition: all ease 0.4s;
+}
