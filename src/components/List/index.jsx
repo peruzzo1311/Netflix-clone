@@ -13,7 +13,6 @@ export default ({ title, items }) => {
     if (x > 0) {
       x = window.innerWidth - listW - 60
     }
-
     setScrollX(x)
   }
 

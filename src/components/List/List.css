@@ -1,7 +1,7 @@
 .movieRow{
   margin-bottom: 32px;
   padding: 0 32px;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .movie h1 {
@@ -55,4 +55,15 @@
 
 .movieRow-list{
   transition: all ease 0.4s;
+}
+
+@media(max-width: 760px){
+  .movieRow-item{
+    width: 180px;
+  }
+
+  .movie:hover .movieRow-left,
+  .movie:hover .movieRow-right{
+  opacity: 0;
+}
 }

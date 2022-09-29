@@ -80,6 +80,10 @@
   margin-right: 16px;
 }
 
+.icon-play{
+  font-size: 16px;
+}
+
 .featured-mylist{
   background-color: #222;
   color: #fff;
@@ -88,4 +92,36 @@
 .featured-genres{
   margin-top: 20px;
   color: #808080;
+}
+
+@media(max-width: 760px) {
+  .featured{
+    height: 95vh;
+  }
+
+  .featured-name{
+    font-size: 2rem;
+  }
+
+  .featured-info{
+    font-size: 1rem;
+  }
+
+  .featured-description{
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .featured-buttons > a{
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
+
+  .icon-play{
+    font-size: 13px;
+  }
+
+  .featured-genres{
+    font-size: 0.9rem;
+  }
 }
